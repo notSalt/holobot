@@ -4,22 +4,19 @@ const NekoClient = require('nekos.life')
 const client = new Discord.Client()
 const neko = new NekoClient()
 
-const iLoveHolo = [
-  'love you holo',
-  'i love you holo',
-  'love u holo',
-  'i love u holo',
-  'i love you, holo',
-  'i love u, holo',
-]
-
 client.once('ready', () => {
   console.log('Holo is ready!')
 
   client.on('message', async message => {
     // I love you holo
-    if (iLoveHolo.includes(message.content.trim())) {
-      message.reply('I love you too.')
+    if (message.author.bot) return;
+    if (message.content.toLowerCase().startsWith("i love you holo") || message.content.toLowerCase().startsWith("love you holo") || message.content.toLowerCase().startsWith("love u holo") || message.content.toLowerCase().startsWith("i love u holo")) {
+      return message.channel.send(`I love you too ${message.author}`);
+    }
+    else if (message.content.toLowerCase().startsWith("i love you") || message.content.toLowerCase().startsWith("i love u")) {
+      let messageArray = message.content.split(" ");
+      let lovedUser = messageArray.slice(3).join(" ");
+      return message.channel.send(`We love you ${lovedUser}`);
     }
 
     // Holo Commands
