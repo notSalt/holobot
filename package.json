@@ -1,0 +1,29 @@
+{
+  "name": "holobot",
+  "version": "0.1.0",
+  "description": "A Discord bot from Holofan4life Discord server",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "nekos.life": "^2.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node -r dotenv/config ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notSalt/holobot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "_notSalt#0303",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/notSalt/holobot/issues"
+  },
+  "homepage": "https://github.com/notSalt/holobot#readme"
+}
